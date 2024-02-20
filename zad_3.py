@@ -1,15 +1,10 @@
-def funkcja_3 (numbers):
-    if type(numbers) != list:
-        return 'pass list of numbers'
-    if len(numbers) != 10:
-        return 'pass list of 10 numbers'
-    for numb in numbers:
-        if type(numb) != int:
-            return 'elements must be numbers'
-    for numb in range(len(numbers)):
-        if numbers[numb]%2 ==0:
-             print(numbers[numb])
-    
-lista = [0,1,1,1,1,1,1,1,1,2]
+def is_even(number:int) -> bool:
+    return bool(number%2 == 0)
 
-funkcja_3(lista)
+test_number = 6
+result = is_even(test_number)
+
+if result:
+    print("Liczba parzysta")
+else:
+    print("Liczba nieparzysta")

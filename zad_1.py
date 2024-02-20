@@ -1,10 +1,5 @@
-def funkcja_1 (names):
-    if type(names) != list:
-        return 'pass list of names'
-    if len(names) != 5:
-        return 'pass list of 5 names'
-    for name in names:
-        print(name)
+def name(name: str, surname: str) -> str:
+    return f'Cześć {name} {surname}'
 
-lista = ['mateusz', 'ada', 'adam', 'karol', 'tomek']
-funkcja_1(lista)
+id = name('Mateusz', 1)
+print(id)
