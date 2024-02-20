@@ -7,4 +7,4 @@ def funkcja_1 (names):
         print(name)
 
 lista = ['mateusz', 'ada', 'adam', 'karol', 'tomek']
-print(funkcja_1(lista))
+funkcja_1(lista)
