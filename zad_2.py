@@ -1,5 +1,5 @@
 from datetime import datetime
-from zad_1 import Student, student1, student2, student3
+from zad_1 import Student, student1
 
 
 class Library:
@@ -100,6 +100,7 @@ class Order:
         Employee: {self.employee.first_name} {self.employee.last_name}\n
         Student: {self.student.name}\nBooks: {', '.join(book_titles)}\n
         Order Date: {self.order_date}'''
+
 
 library1 = Library("Katowice", "3-maja", "40-507", "8-16", "997997997")
 library2 = Library("Sosnowiec", "3-maja", "40-507", "8-16", "997997997")
