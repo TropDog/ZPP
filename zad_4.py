@@ -11,7 +11,10 @@ class Property:
         self.address = address
 
     def __str__(self):
-        return f"Property Details:\nArea: {self.area}\nNumber of Rooms: {self.rooms}\nPrice: {self.price}\nAddress: {self.address}"
+        return f'''Property Details:\n
+        Area: {self.area}\n
+        Number of Rooms: {self.rooms}\n
+        Price: {self.price}\nAddress: {self.address}'''
 
 
 class House(Property):
@@ -26,7 +29,9 @@ class House(Property):
         self.plot = plot
 
     def __str__(self):
-        return f"Property type - House:\n{super().__str__()}\nPlot Area: {self.plot}"
+        return f'''Property type - House:\n
+        {super().__str__()}\n
+        Plot Area: {self.plot}'''
 
 
 class Flat(Property):
@@ -41,7 +46,8 @@ class Flat(Property):
         super().__init__(area, rooms, price, address)
 
     def __str__(self):
-        return f"Property type - Flat\n{super().__str__()}\nFloor: {self.floor}"
+        return f'''Property type - Flat\n
+        {super().__str__()}\nFloor: {self.floor}'''
 
 
 house1 = House("Katowice", 3, 123.5, 'address1', 500)
