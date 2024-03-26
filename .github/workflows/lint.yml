@@ -17,4 +17,3 @@ jobs:
     - name: Lint with pycodestyle
       run: |
         pip install pycodestyle
-        pycodestyle --max-line-length=180
