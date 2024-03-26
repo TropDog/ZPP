@@ -4,7 +4,11 @@ from zad_1 import Student, student1, student2, student3
 
 class Library:
     def __init__(
-        self, city: str, street: str, zip_code: str, open_hours: str, phone: str
+        self, city: str,
+        street: str,
+        zip_code: str,
+        open_hours: str,
+        phone: str
     ) -> None:
         self.city = city
         self.street = street
@@ -74,14 +78,18 @@ class Book:
 
 class Order:
     def __init__(
-        self, employee: Employee, student: Student, books: list, order_date: datetime
+        self, employee: Employee,
+        student: Student,
+        books: list,
+        order_date: datetime
     ) -> None:
         self.employee = employee
         self.student = student
         for book in books:
             if not isinstance(book, Book):
                 raise TypeError(
-                    "All elements in the 'books' list must be instances of the Book class."
+                    '''All elements in the 'books' list
+                      must be instances of the Book class.'''
                 )
         self.books = books
         self.order_date = order_date
