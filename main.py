@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/from_disc/{file_name}")
 def count_people_on_img(file_name: str):
-    return logic.count_people_on_img(file_name + ".jpg")
+    return logic.count_people_on_img(file_name)
 
 @app.get("/files/{url_path:path}")
 def count_people_on_img_url(url_path: str):

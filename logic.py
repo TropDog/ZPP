@@ -12,13 +12,16 @@ def count_people_on_img(file_name:str) -> int:
     hog = cv2.HOGDescriptor()
     hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
-    boxes, weights = hog.detectMultiScale(gray, winStride = (5,30))
+    boxes, weights = hog.detectMultiScale(gray, winStride = (5,20))
     boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])
 
     for (xA, yA, xB, yB) in boxes: 
         # display the detected boxes in the colour picture
         cv2.rectangle(img, (xA, yA), (xB, yB),
                             (0, 255, 0), 2)
+    new_path = str("transformed_" + path)
+    print(new_path)
+    cv2.imwrite(new_path, img)
 
     return len(boxes)
 
@@ -42,8 +45,9 @@ def count_people_on_img_from_url(url:str) -> int:
         # display the detected boxes in the colour picture
         cv2.rectangle(img, (xA, yA), (xB, yB),
                             (0, 255, 0), 2)
-    
-
+        
+    filename =  os.path.join(str(url), ".jpg")
+    cv2.imwrite(filename, img)
     return len(boxes)
 
 def save_images_and_count(files: list[UploadFile] = File(...)):
