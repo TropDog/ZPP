@@ -22,10 +22,10 @@ async def create_upload_files(files: list[UploadFile] = File(...)):
 @app.get("/")
 async def main():
     content = """
-<body>
-<form action="/upload_jpg/" enctype="multipart/form-data" method="post">
-<input name="files" type="file" multiple>
-<input type="submit">
-</body>
+            <body>
+            <form action="/upload_jpg/" enctype="multipart/form-data" method="post">
+            <input name="files" type="file" multiple>
+            <input type="submit">
+            </body>
     """
     return HTMLResponse(content=content)
